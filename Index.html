@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple API Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    #form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #results {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #results p {
+      background: #e3f2fd;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple API Fetch</h1>
+  <div id="form-container">
+    <form id="api-form">
+      <label for="user-id">Enter User ID (1-10):</label>
+      <input type="number" id="user-id" placeholder="e.g., 1" required min="1" max="10">
+      <button type="submit">Fetch User</button>
+    </form>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('api-form');
+    const results = document.getElementById('results');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent form from submitting
+      results.innerHTML = ''; // Clear previous results
+
+      const userId = document.getElementById('user-id').value;
+
+      // Fetch data from a public placeholder API
+      const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('User not found');
+        }
+        const data = await response.json();
+
+        // Display the fetched user data
+        results.innerHTML = `
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Phone:</strong> ${data.phone}</p>
+          <p><strong>Website:</strong> <a href="http://${data.website}" target="_blank">${data.website}</a></p>
+        `;
+      } catch (error) {
+        results.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
