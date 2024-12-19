@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="FirstFile.css">
-    <title>Simple HTML Page</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <p>This is a simple HTML page.</p>
+    <title>Simple HTML Page</title></head>
+
+<style>table,th,td{border:1px solid black;border-collapse:collapse;} 
+    th,td{padding:10px;text-align:left;}
+    .my-group{background-color:yellow;color:red;text-align:center;}
+    .main-heading{background-color:lightcoral;color:black;text-align:center;}
+</style>
+<body style="background-color:lightblue;">
+    <h1 style="font-size:60px;font-family:sans-serif;color:red;text-align:center;background-color:yellow;border:2px solid black;"><i>Hello World</i></h1>
+    <p style="font-size:20px;color:blue;text-align:center;background-color:green;"><b>This is a simple HTML page<br>Break Line with</b></p>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width:100px;height:100px;">
+    <a href="https://www.w3schools.com/html/"target="_blank">Visit our HTML Tutorial</a>
+    <a href="html_images.asp"> <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width:100px;height:100px;">HTML Images</a>
+    <iframe src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" style="border:5px;height:100px,;"></iframe>
+    <table style="width:100%;">
+    <tr>    
+        <th class="main-heading" colspan="2">Name</th>
+        <th class="main-heading">Age</th>        
+    </tr>
+    <tr class="my-group"><td>Omkar</td><td>Hegde</td><td>34</td></tr>
+    <tr><td>Chandana</td><td>Hegde</td><td>33</td></tr>
+    <tr><td>Viju</td><td>Hegde</td><td>31</td></tr>
+</table>
+<h2>An ordered list</h2>
+<ol style="list-style-type:upper-roman;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+<h2>An unordered list</h2>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
 </body>
 </html>
+ 
