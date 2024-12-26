@@ -1,0 +1,89 @@
+<!-- Family.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        .family-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+        }
+        .family-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .family-header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .family-header i {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        .family-select {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+<div class="w3-container w3-blue family-header">
+    <h1><i class="fas fa-home"></i> My Family</h1>
+</div>
+
+<div class="w3-container">
+    
+    
+    <div class="family-select">
+        <label for="familyMembers"> Family Members:</label>
+        <select id="familyMembers" class="w3-select w3-border" style="width: 100%; max-width: 300px;">
+            <option value="" disabled selected>Select a member</option>
+            <option value="Ramesh">Ramesh - Father in-law</option>
+            <option value="Janaki">Janaki - Mother in-law</option>
+            <option value="Raveesh">Raveesh - Husband</option>
+            <option value="Dhanvi">Dhanvi - Daughter</option>
+            <option value="Samarth">Samarth - Brother</option>
+            <option value="Mamata">Mamata - Mother</option>
+            <option value="Shrinivas">Viju-Sister</option>
+            
+        </select>
+    </div>
+    <div class="family-select"></div>
+        <label for="age">Select Age:</label>
+        <select id="age" class="w3-select w3-border" style="width: 100%; max-width: 300px;">
+            <option value="" disabled selected>Select age</option>
+            <option value="</option>
+            <option value="70-80">Father in-law :70</option>
+            <option value="60-70">Mother in-law :66</option>
+            <option value="31-40">Husband :36</option>
+            <option value="0-10">Daughter:4 </option>
+            <option value="20-30">brother:24</option>
+            <option value="50-60">Mother:55</option>
+            <option value="30-40">Sister:31</option>
+        </select>
+    </div>
+
+    <div class="family-card">
+        <h3>About My Family</h3>
+        <p>We are a close-knit family of 10, sharing love, laughter, and support. Each member plays a unique role in our lives, contributing to our happiness and growth.</p>
+    </div>
+
+    <div class="family-card">
+        <h3>Family Values</h3>
+        <p>We believe in respect, kindness, and togetherness. Our family gatherings are filled with joy, and we cherish every moment spent together.</p>
+    </div>
+</div>
+
+
+</body>
+</html>
